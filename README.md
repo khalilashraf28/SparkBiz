@@ -61,5 +61,9 @@ SparkBiz includes the following webpages:
 
 - **Rija Javed:**
   - GitHub: [Rija Javed](https://github.com/RIJA3113)
+## Supervisor
+
+- **Miss Faiza Farooq:** ***(Junior Lecturer in the Computer Engineering Department at Sir Syed University of Engineering and Technology)***
+  - GitHub: [Faiza Farooq](https://github.com/user)
 
 Feel free to contribute to SparkBiz and make it even better! If you have any questions or concerns, please contact Muhammad Khalil Ashraf.
