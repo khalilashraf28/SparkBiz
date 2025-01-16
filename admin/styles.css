@@ -1,0 +1,167 @@
+:root {
+    --main-bg-color: #FFA500;
+    --main-text-color: black;
+    --second-text-color: #bbbec5;
+    --second-bg-color: #ffa600a9;
+}
+
+.primary-text {
+    color: var(--main-text-color);
+}
+
+.second-text {
+    color: var(--second-text-color);
+}
+
+.primary-bg {
+    background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+    background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+#wrapper {
+    overflow-x: hidden;
+    background-image: linear-gradient(to right,
+            #FFA500,
+            #FFC966);
+}
+
+.logo {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.logo img {
+    width: auto;
+    height: 80px;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle,
+#menu-toggle-dash,
+#menu-toggle-proj,
+#menu-toggle-anal,
+#menu-toggle-report,
+#menu-toggle-product,
+#menu-toggle-chat {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+    padding: 20px 30px;
+}
+
+.list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+.btn-lg {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.home-img {
+    transition: transform 0.3s ease-in-out;
+    /* Add a smooth transition effect */
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.home-img:hover {
+    transform: translateY(-10px);
+    /* Move the image 10px up on hover */
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+}
+
+@media (max-width: 1010px) {
+    .btn-lg {
+        padding-left: 15px;
+        padding-right: 15px;
+        /* font-size: 14px; */
+    }
+}
+
+.visual {
+    align-items: center;
+    background-color: #fff;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px; /* You can adjust the width as needed */
+    /* Set the height as needed */
+}
+
+@media (max-width: 1300px) {
+    .home-img {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-img img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}

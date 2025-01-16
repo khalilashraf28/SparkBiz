@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .contact-form {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        #confirmation-message {
+            margin-top: 20px;
+        }
+
+        .amy {
+            /* background-color: #eec800; */
+            background-image: linear-gradient(to right,
+                    #FFA500,
+                    #FFC966);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- nav -->
+    <div class="navs ">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+                    <!-- Container wrapper -->
+                    <div class="container-fluid">
+                        <!-- Toggle button -->
+                        <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Collapsible wrapper -->
+                        <div class="collapse navbar-collapse ok" id="navbarSupportedContent">
+                            <!-- Navbar brand -->
+                            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                                <img src="../SPARKBIZ-LOGO4_iwlmer4s.png" height="60" alt="MDB Logo" />
+                            </a>
+                            <!-- Left links -->
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">customer</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">Project</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="form.html">Form</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="Contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="../logout.php">Logut</a>
+                                </li>
+                              </ul>
+                            <!-- Left links -->
+                        </div>
+                        <!-- Collapsible wrapper -->
+
+                        <!-- Right elements -->
+                        <div class="d-flex align-items-center">
+                            <!-- Icon -->
+                            <a class="text-reset me-3" href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+
+                            <!-- Notifications -->
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="" href="#">
+                                </a>
+
+
+                            </div>
+                            <!-- Right elements -->
+                        </div>
+
+                        <!-- Container wrapper -->
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- form -->
+
+    <div class="amy">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 contact-form">
+                    <h2 class="text-center mb-4"><i class="fas fa-shopping-cart"></i> Order</h2>
+
+                    <div id="confirmation-message" class="alert alert-success" role="alert">
+                        <i class="fas fa-check-circle"></i> Thank you for your order! We will process it soon.
+                    </div>
+                    <div class="d-grid mx-auto d-md-flex text-center">
+                        <a href="form.html" class="btn btn-danger" role="button"><i class="fas fa-arrow-left"></i>
+                            Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-mdb-collapse-init]').on('click', function () {
+                $($(this).data('mdb-target')).toggleClass('show');
+            });
+
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.navbar').length && !$(e.target).is('[data-mdb-collapse-init]')) {
+                    $('.navbar-collapse').removeClass('show');
+                }
+            }).on('click', '.navbar-collapse', function (e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

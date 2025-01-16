@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contact Us Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    .contact-form {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    #confirmation-message {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .btn-primary:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    }
+
+    .amy {
+      /* background-color: #eec800; */
+      background-image: linear-gradient(to right,
+          #FFA500,
+          #FFC966);
+    }
+
+    /* .form-group label::before {
+      content: '*';
+      color: red;
+      margin-right: 4px;
+      Adjust the spacing between the asterisk and the label text
+    } */
+    .red label::before {
+      content: '*';
+      color: red;
+      margin-right: 4px;
+      /* Adjust the spacing between the asterisk and the label text */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- nav -->
+  <div class="navs ">
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Toggle button -->
+            <button data-mdb-collapse-init class="navbar-toggler" type="button"
+              data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse ok" id="navbarSupportedContent">
+              <!-- Navbar brand -->
+              <a class="navbar-brand mt-2 mt-lg-0" href="index.php">
+                <img src="../SPARKBIZ-LOGO4_iwlmer4s.png" height="60" alt="MDB Logo" />
+              </a>
+              <!-- Left links -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="index.php">customer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="index.php">Project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="form.html">Form</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="Contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left" href="../logout.php">Logut</a>
+                </li>
+              </ul>
+              <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+              <!-- Icon -->
+              <a class="text-reset me-3" href="#">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+
+              <!-- Notifications -->
+              <div class="dropdown">
+                <a data-mdb-dropdown-init class="" href="#">
+                </a>
+
+
+              </div>
+              <!-- Right elements -->
+            </div>
+
+            <!-- Container wrapper -->
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- form -->
+
+  <div class="amy">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 contact-form">
+          <h2 class="text-center mb-4"><i class="fas fa-shopping-cart"></i> Order</h2>
+          <!-- <form action="form.php" method="post" id="orderForm" onsubmit="submitForm(event)"> -->
+          <form action="form.php" method="post">
+            <div class="red">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name"><i class="fas fa-user"></i> Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="product"><i class="fas fa-shopping-bag"></i> Product</label>
+                <input type="text" class="form-control" id="product" name="product" placeholder="Product Name" required>
+              </div>
+              <div class="form-group">
+                <label for="product"><i class="fas fa-phone"></i> Phone no</label>
+                <input type="tel" class="form-control" id="phoneno" name="phoneno" placeholder="Phone Number" required>
+              </div>
+              <div class="form-group">
+                <label for="product-select"><i class="fas fa-clipboard-check"></i> Product Type</label>
+                <select class="form-control" name="productType" id="productType" required>
+                  <option value="" data-price="0" selected disabled>Please select Type of Product</option>
+                  <option value="branding" data-price="7000">Branding</option>
+                  <option value="webD" data-price="20000">Web Designing</option>
+                  <option value="logoD" data-price="10000">Logo Designing</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="quantity"><i class="fas fa-box"></i> Quantity</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required
+                  min="1" value="1">
+              </div>
+              <div class="form-group">
+                <label for="total"><i class="fas fa-dollar-sign"></i> Total Price</label>
+                <input type="text" class="form-control" id="total" name="total" readonly>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment"></i> Additional Information</label>
+              <textarea class="form-control" id="message" name="message" rows="4"
+                placeholder="Any additional instructions"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('[data-mdb-collapse-init]').on('click', function () {
+        $($(this).data('mdb-target')).toggleClass('show');
+      });
+
+      $(document).on('click', function (e) {
+        if (!$(e.target).closest('.navbar').length && !$(e.target).is('[data-mdb-collapse-init]')) {
+          $('.navbar-collapse').removeClass('show');
+        }
+      }).on('click', '.navbar-collapse', function (e) {
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <script>
+    // Function to calculate total price
+    function calculateTotal() {
+      var quantity = $("#quantity").val();
+
+      // Fetch the price based on the selected product type
+      var price = $("#productType option:selected").data("price");
+
+      // Calculate the total price
+      var total = price * quantity;
+
+      // Display the total price in the input field
+      $("#total").val(total);
+    }
+
+    // Attach the calculateTotal function to the change event of productType and quantity
+    $("#productType, #quantity").on("change keyup", calculateTotal);
+
+    // Trigger initial calculation on page load
+    calculateTotal();
+  </script>
+</body>
+
+</html>

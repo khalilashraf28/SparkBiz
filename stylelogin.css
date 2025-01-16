@@ -1,0 +1,39 @@
+.gradient-custom-2 {
+    background: #fccb90;
+    background: -webkit-linear-gradient(to right, gray, #FFC966);
+    background-image: linear-gradient(to right, gray, #FFC966);
+}
+.gradient-custom-3{
+    background-image: linear-gradient(to right, #FFA500, #FFC966);
+    padding:15px;
+    font-weight: bold;
+}
+.gradient-custom-3:hover{
+    background-image: linear-gradient(to right, darkgray, #FFA500);
+    color: #000; /* Change to the desired text color on hover */
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (max-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+    .gradient-custom-3{
+        /* padding: 20px; */
+    }
+}
+.btn-custom {
+    background-image: linear-gradient(to right, #FFA500, #FFC966);
+    font-weight: bold;
+  }
+
+  .btn-custom:hover {
+    background-image: linear-gradient(to right, darkgray, #FFA500);
+    color: #fff; /* Change to the desired text color on hover */
+  }

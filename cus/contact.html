@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .contact-form {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        #confirmation-message {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        } 
+
+        .amy {
+            background-image: linear-gradient(to right,
+                    #FFA500,
+                    #FFC966);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <div class="navs ">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+                    <!-- Container wrapper -->
+                    <div class="container-fluid">
+                        <!-- Toggle button -->
+                        <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Collapsible wrapper -->
+                        <div class="collapse navbar-collapse ok" id="navbarSupportedContent">
+                            <!-- Navbar brand -->
+                            <a class="navbar-brand mt-2 mt-lg-0" href="index.php">
+                              <img src="../SPARKBIZ-LOGO4_iwlmer4s.png" height="60" alt="MDB Logo" />
+                            </a>
+                            <!-- Left links -->
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">customer</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="index.php">Project</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="form.html">Form</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="Contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link hvr-underline-from-left" href="../logout.php">Logut</a>
+                                </li>
+                              </ul>
+                            <!-- Left links -->
+                          </div>
+                        <!-- Collapsible wrapper -->
+
+                        <!-- Right elements -->
+                        <div class="d-flex align-items-center">
+                            <!-- Icon -->
+                            <a class="text-reset me-3" href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+
+                            <!-- Notifications -->
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="" href="#">
+                                </a>
+
+
+                            </div>
+                            <!-- Right elements -->
+                        </div>
+
+                        <!-- Container wrapper -->
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- form -->
+    <div class="amy">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 contact-form">
+                    <h2 class="text-center mb-4"><i class="fas fa-envelope"></i> Contact Us</h2>
+                    <form action="contact.php" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question"><i class="fa fa-question"></i> Question</label>
+                            <textarea class="form-control" id="question" name="question" rows="4"
+                                placeholder="Your Question" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-mdb-collapse-init]').on('click', function () {
+                $($(this).data('mdb-target')).toggleClass('show');
+            });
+
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.navbar').length && !$(e.target).is('[data-mdb-collapse-init]')) {
+                    $('.navbar-collapse').removeClass('show');
+                }
+            }).on('click', '.navbar-collapse', function (e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
